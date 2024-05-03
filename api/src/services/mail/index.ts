@@ -58,7 +58,7 @@ export class MailService {
 
 		const defaultTemplateData = await this.getDefaultTemplateData();
 
-		const from = `${defaultTemplateData.projectName} <${options.from || (env['EMAIL_FROM'] as string)}>`;
+		const from = `${env['EMAIL_FROM_NAME'] as string} <${options.from || (env['EMAIL_FROM'] as string)}>`;
 
 		if (template) {
 			let templateData = template.data;
